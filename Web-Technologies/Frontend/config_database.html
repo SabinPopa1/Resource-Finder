@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management - Resource Finder</title>
+    <link rel="stylesheet" href="/ResourceFi/Web-Technologies/Frontend/css/database_config.css">
+    <script src="/ResourceFi/Web-Technologies/Frontend/js/config_db.js"></script>
+    <script src="/ResourceFi/Web-Technologies/Frontend/js/config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Resource Finder</h1>
+            <nav>
+                <ul>
+                    <li><a href="home" class="btn nav-btn">Home</a></li>
+                    <li><a href="admin" class="btn nav-btn">My Account Settings</a></li>
+                    <li><a href="configusers" class="btn nav-btn">Accounts Settings</a></li>
+                    <li><a href="#" id='logoutButton' class="btn nav-btn">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="table-container">
+            <h2>Database Management</h2>
+            <table id="database-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>URL</th>
+                        <th>Description</th>
+                        <th>Language</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="form-container">
+                <form id="add-row-form">
+                    <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+                    <input type="text" name="url" placeholder="URL" autocomplete="url" required>
+                    <input type="text" name="description" placeholder="Description" autocomplete="off" required>
+                    <input type="text" name="language" placeholder="Language" autocomplete="off" required>
+                    <input type="text" name="type" placeholder="Type" autocomplete="off" required>
+                    <button type="submit" class="btn">Add Row</button>
+                </form>
+            </div>
+            <div class="io-buttons">
+                <button class="io-button" id="import-csv">Import CSV</button>
+                <button class="io-button" id="import-json">Import JSON</button>
+                <input type="file" id="file-input" style="display:none;">
+                <button class="io-button" id="export-csv">Export as CSV</button>
+                <button class="io-button" id="export-json">Export as JSON</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Resource Finder</p>
+    </footer>
+</body>
+</html>

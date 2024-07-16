@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Resource Finder</title>
+    <link rel="stylesheet" href="/ResourceFi/Web-Technologies/Frontend/css/account_settings.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Resource Finder</h1>
+            <nav>
+                <ul>
+                    <li><a href="home" class="btn nav-btn">Home</a></li>
+                    <li><a href="home" id='logoutButton' class="btn nav-btn">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Account Settings</h2>
+            <p>Manage your account settings below</p>
+            <div class="forms">
+                <form id="account-settings-form">
+                    <h3>Change Email</h3>
+                    <label for="new-email">New Email:</label>
+                    <input type="email" id="new-email" name="new-email" required>
+                    <button type="submit" class="btn">Change Email</button>
+                </form>
+                <form id="password-change-form">
+                    <h3>Change Password</h3>
+                    <label for="current-password">Current Password:</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                    <button type="submit" class="btn">Change Password</button>
+                </form>
+            </div>
+            <div class="database-access" id="database-access" style="display: none;">
+                <a class="btn access-btn" href="config">Access Database</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Resource Finder</p>
+    </footer>
+    <script src="/ResourceFi/Web-Technologies/Frontend/js/admin.js"></script>
+</body>
+</html>
